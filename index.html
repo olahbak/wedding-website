@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ola & Mireya's Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gopher+Text:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Gopher Text', sans-serif;
+      background-color: #fdfaf6;
+      color: #0E088C;
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      margin-top: 40px;
+    }
+    .date-location {
+      font-size: 1.2em;
+      color: #D32F23;
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0E088C;
+      font-weight: bold;
+    }
+    .section {
+      margin-top: 60px;
+    }
+    .rsvp-btn {
+      background-color: #D32F23;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      margin-left: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #0E088C;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+    .illustration {
+      margin: 30px auto;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-toggle">
+    <button onclick="switchLang('en')">EN</button>
+    <button onclick="switchLang('es')">ES</button>
+    <button onclick="switchLang('pl')">PL</button>
+  </div>
+
+  <header>
+    <h1 data-en="We're getting married!" data-es="¡Nos casamos!" data-pl="Pobieramy się!">We're getting married!</h1>
+    <h2>Ola & Mireya</h2>
+    <p class="date-location" data-en="September 12, 2025 - Valencia, Spain" data-es="12 de septiembre de 2025 - Valencia, España" data-pl="12 września 2025 - Walencja, Hiszpania">September 12, 2025 - Valencia, Spain</p>
+  </header>
+
+  <nav>
+    <a href="#start">Start Here</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#map">Map</a>
+    <a href="#gifts">Gift Info</a>
+    <a href="#info">Essential Info</a>
+  </nav>
+
+  <section id="start" class="section">
+    <h2>Start Here</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Party_line_drawing.svg/768px-Party_line_drawing.svg.png" class="illustration" alt="Illustration of people cheering" />
+    <p><!-- Add your welcome text here --></p>
+  </section>
+
+  <section id="rsvp" class="section">
+    <h2 data-en="Will you join us?" data-es="¿Te vienes?" data-pl="Dołączysz do nas?">Will you join us?</h2>
+    <p data-en="Please confirm your attendance below!" data-es="Por favor, confirma tu asistencia abajo" data-pl="Potwierdź swoją obecność poniżej">Please confirm your attendance below!</p>
+    <iframe src="" title="RSVP Form Placeholder"></iframe>
+  </section>
+
+  <section id="schedule" class="section">
+    <h2>Schedule</h2>
+    <p><!-- Add your schedule here --></p>
+  </section>
+
+  <section id="map" class="section">
+    <h2>Map</h2>
+    <p><!-- Add directions or embed Google Maps here --></p>
+  </section>
+
+  <section id="gifts" class="section">
+    <h2>Gift Info</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Coins_jar_lineart.svg/640px-Coins_jar_lineart.svg.png" class="illustration" alt="Gift jar illustration" />
+    <p data-en="The best gift is having you with us!" data-es="El mejor regalo es que nos acompañes en este día tan especial." data-pl="Najlepszym prezentem jest Twoja obecność w tym wyjątkowym dniu!">The best gift is having you with us!</p>
+    <p data-en="But if you’d like to give something more…" data-es="Si también quieres tener un detalle adicional…" data-pl="Jeśli chcesz dać coś więcej…">But if you’d like to give something more…</p>
+    <p><!-- Add your bank details or other instructions here --></p>
+  </section>
+
+  <section id="info" class="section">
+    <h2>Essential Info</h2>
+    <p><!-- Add dress code, weather tips, parking info etc. here --></p>
+  </section>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.innerText = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
